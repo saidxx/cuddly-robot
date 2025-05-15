@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download GTA San Andreas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d1117;
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffffff;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #161b22;
+      padding: 15px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand img {
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    .brand h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1.5px;
+    }
+
+    .menu-icon {
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-icon span {
+      height: 4px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      background-color: #1f2937;
+      border-radius: 10px;
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      z-index: 100;
+    }
+
+    .dropdown a {
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #fff;
+      border-bottom: 1px solid #2d3748;
+      transition: background 0.2s;
+    }
+
+    .dropdown a:hover {
+      background-color: #374151;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #161b22;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .rating {
+      color: #facc15;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #c9d1d9;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      background-color: #30363d;
+      padding: 5px 10px;
+      border-radius: 8px;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #c9d1d9;
+      margin-bottom: 16px;
+    }
+
+    .features {
+      margin-bottom: 16px;
+    }
+
+    .features li {
+      font-size: 14px;
+      color: #d1d5db;
+      margin-bottom: 6px;
+    }
+
+    .download-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(to right, #0ea5e9, #3b82f6);
+      color: #fff;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(to right, #0284c7, #2563eb);
+    }
+
+    .download-btn.small {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      font-size: 14px;
+      border-radius: 9999px;
+      background: linear-gradient(to right, #06b6d4, #3b82f6);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .download-btn.small:hover {
+      background: linear-gradient(to right, #0891b2, #2563eb);
+      transform: translateY(-2px);
+    }
+
+    .screenshot {
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .screenshot img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand">
+      <img src="https://i.postimg.cc/NG36k4vh/Chat-GPT-Image-May-15-2025-01-09-05-AM.png" alt="logo" />
+      <h1>getzo</h1>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="dropdown" id="dropdownMenu">
+      <a href="#">🏠 Home</a>
+      <a href="#">📂 Games</a>
+      <a href="#">ℹ️ About</a>
+      <a href="#">📞 Contact</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://i.postimg.cc/vZqD3Yx1/1635447010-san.jpg" alt="GTA San Andreas Cover" />
+      <div class="card-content">
+        <div class="title">GTA San Andreas MOD</div>
+        <div class="rating">⭐ 4.9 (6.5k reviews)</div>
+        <div class="info">
+          <span class="tag">Action</span>
+          <span>2.1 GB</span>
+        </div>
+        <div class="description">
+          🚗 Explore the streets of San Andreas like never before! This GTA San Andreas MOD APK is fully unlocked with all features and premium assets included.
+        </div>
+        <ul class="features">
+          <li>✅ All Missions Unlocked</li>
+          <li>💰 Unlimited Money & Weapons</li>
+          <li>🛠️ MOD Menu Included</li>
+          <li>🎮 Offline Play Support</li>
+          <li>🚀 Enhanced Graphics & Sound</li>
+        </ul>
+        <a href="https://gtsaapk.com/download/" class="download-btn small" target="_blank">🎮 Download Game</a>
+      </div>
+    </div>
+
+    <div class="screenshot">
+      <img src="https://i.postimg.cc/50FHXh0X/Grand-Theft-Auto-San-Andreas-Screenshot-2021-08-27-18-50-54-43.png" alt="GTA Gameplay Screenshot">
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
+
+</body>
+</html>
+
