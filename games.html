@@ -4,68 +4,232 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Games - Getzo</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      background-color: #0d1117;
+      background: linear-gradient(135deg, #0d1117 60%, #1e293b 100%);
       font-family: 'Segoe UI', sans-serif;
       color: #ffffff;
+      min-height: 100vh;
     }
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #161b22;
-      padding: 15px 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      background-color: #161b22cc;
+      padding: 18px 28px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.7);
+      position: relative;
+      z-index: 10;
     }
     .brand {
       display: flex;
       align-items: center;
     }
     .brand img {
-      height: 35px;
-      margin-right: 10px;
+      height: 40px;
+      margin-right: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #06b6d4aa;
     }
     .brand h1 {
-      font-size: 26px;
+      font-size: 1.7rem;
       font-weight: 700;
       margin: 0;
-      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      background: linear-gradient(90deg, #3b82f6, #06b6d4 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+      text-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
       font-family: 'Orbitron', sans-serif;
       letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      z-index: 20;
+      padding: 6px;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #fff;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 60px;
+      right: 28px;
+      background: #1f2937ee;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(6,182,212,0.08), 0 2px 8px rgba(59,130,246,0.08);
+      min-width: 150px;
+      padding: 12px 0;
+      z-index: 100;
+      animation: fadeIn 0.2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 9px 18px;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.5px;
+      display: block;
+    }
+    nav a:hover, nav a:focus {
+      background: linear-gradient(90deg, #3b82f6 60%, #06b6d4 100%);
+      color: #fff;
+      outline: none;
     }
     .container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
+      max-width: 540px;
+      margin: 48px auto 0 auto;
+      padding: 28px 16px 32px 16px;
+      background: rgba(22,27,34,0.95);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(6,182,212,0.08), 0 2px 8px rgba(59,130,246,0.08);
+      backdrop-filter: blur(2px);
+      position: relative;
+      overflow: hidden;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+      opacity: 0.18;
+      z-index: 0;
     }
     h2 {
-      font-size: 24px;
-      margin-bottom: 16px;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      text-align: center;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1.1px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
     }
     ul {
       list-style: none;
       padding: 0;
+      margin: 0;
+      position: relative;
+      z-index: 1;
     }
     li {
       background: #161b22;
-      margin-bottom: 12px;
-      padding: 16px;
+      margin-bottom: 14px;
+      padding: 16px 14px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      font-size: 18px;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
-    a {
+    li:hover {
+      box-shadow: 0 6px 24px #06b6d4aa;
+      transform: translateY(-2px) scale(1.01);
+    }
+    .game-title {
+      font-weight: bold;
       color: #3b82f6;
-      text-decoration: none;
+      letter-spacing: 0.5px;
+      font-size: 1rem;
     }
-    a:hover {
-      text-decoration: underline;
+    .download-link {
+      color: #06b6d4;
+      background: #222b3a;
+      padding: 5px 12px; /* smaller padding */
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem; /* smaller font */
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(6,182,212,0.08);
+      margin-left: 10px;
+    }
+    .download-link:hover, .download-link:focus {
+      background: linear-gradient(90deg, #3b82f6 60%, #06b6d4 100%);
+      color: #fff;
+      transform: scale(1.05);
+      outline: none;
+    }
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 8px;
+      }
+      .brand img {
+        height: 28px;
+        margin-right: 6px;
+      }
+      .brand h1 {
+        font-size: 1rem;
+      }
+      .menu-toggle {
+        top: 10px;
+        right: 10px;
+      }
+      nav {
+        right: 10px;
+        top: 44px;
+        min-width: 100px;
+        padding: 7px 0;
+      }
+      .container {
+        margin: 18px 4px 0 4px;
+        padding: 10px 4px 18px 4px;
+        border-radius: 10px;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+      li {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.95rem;
+        padding: 10px 6px;
+      }
+      .download-link {
+        margin-left: 0;
+        margin-top: 8px;
+        width: auto;
+        text-align: center;
+        padding: 5px 12px; /* keep small on mobile */
+        font-size: 0.92rem;
+      }
     }
   </style>
 </head>
@@ -75,15 +239,44 @@
       <img src="https://i.postimg.cc/NG36k4vh/Chat-GPT-Image-May-15-2025-01-09-05-AM.png" alt="Getzo logo" />
       <h1>getzo</h1>
     </div>
+    <!-- Hamburger icon styled like index.html/about.html -->
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="menu">
+      <a href="index.html">🏠 Home</a>
+      <a href="games.html">📂 Games</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </nav>
   </div>
   <div class="container">
     <h2>Games List</h2>
     <ul>
       <li>
-        <a href="webpage">GTA San Andreas MOD</a>
+        <span class="game-title">GTA San Andreas MOD</span>
+        <a href="path/to/gta-san-andreas-mod.apk" download="GTA_San_Andreas_MOD.apk" class="download-link">Download</a>
       </li>
       <!-- Add more games here -->
     </ul>
   </div>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+    // Optional: Hide menu when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+      const menu = document.getElementById('menu');
+      const toggle = document.querySelector('.menu-toggle');
+      if (window.innerWidth <= 768 && menu.style.display === 'flex') {
+        if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+          menu.style.display = 'none';
+        }
+      }
+    });
+  </script>
 </body>
 </html>
