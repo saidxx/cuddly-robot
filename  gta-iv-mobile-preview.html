@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Games - Getzo</title>
-  <!-- Favicon -->
+  <title>GTA IV Mobile Preview</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
@@ -30,21 +29,21 @@
       align-items: center;
     }
     .brand img {
-      height: 40px;
-      margin-right: 12px;
+      height: 44px;
+      margin-right: 14px;
       border-radius: 8px;
       box-shadow: 0 2px 8px #06b6d4aa;
     }
     .brand h1 {
-      font-size: 1.7rem;
+      font-size: 2rem;
       font-weight: 700;
       margin: 0;
       background: linear-gradient(90deg, #3b82f6, #06b6d4 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+      text-shadow: 0 0 16px rgba(59, 130, 246, 0.25);
       font-family: 'Orbitron', sans-serif;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
     .menu-toggle {
@@ -61,25 +60,25 @@
     }
     .menu-toggle span {
       display: block;
-      width: 26px;
+      width: 28px;
       height: 3px;
       background: #fff;
-      margin: 5px 0;
+      margin: 6px 0;
       border-radius: 2px;
       transition: background 0.2s;
     }
     nav {
       display: none;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       position: absolute;
       top: 60px;
       right: 28px;
       background: #1f2937ee;
       border-radius: 12px;
       box-shadow: 0 8px 32px rgba(6,182,212,0.08), 0 2px 8px rgba(59,130,246,0.08);
-      min-width: 150px;
-      padding: 12px 0;
+      min-width: 170px;
+      padding: 16px 0;
       z-index: 100;
       animation: fadeIn 0.2s;
     }
@@ -90,9 +89,9 @@
     nav a {
       color: #ffffff;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 1.08rem;
       font-weight: 500;
-      padding: 9px 18px;
+      padding: 10px 24px;
       border-radius: 8px;
       transition: background 0.2s, color 0.2s;
       letter-spacing: 0.5px;
@@ -104,11 +103,11 @@
       outline: none;
     }
     .container {
-      max-width: 540px;
-      margin: 48px auto 0 auto;
-      padding: 28px 16px 32px 16px;
+      max-width: 700px;
+      margin: 56px auto 0 auto;
+      padding: 32px 24px 32px 24px;
       background: rgba(22,27,34,0.95);
-      border-radius: 16px;
+      border-radius: 18px;
       box-shadow: 0 8px 32px rgba(6,182,212,0.08), 0 2px 8px rgba(59,130,246,0.08);
       backdrop-filter: blur(2px);
       position: relative;
@@ -119,118 +118,92 @@
       position: absolute;
       top: -60px;
       right: -60px;
-      width: 140px;
-      height: 140px;
+      width: 180px;
+      height: 180px;
       background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
       opacity: 0.18;
       z-index: 0;
     }
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 20px;
+      font-size: 2.1rem;
+      margin-bottom: 22px;
       text-align: center;
       background: linear-gradient(90deg, #3b82f6, #06b6d4 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: 1.1px;
+      letter-spacing: 1.2px;
       font-family: 'Orbitron', sans-serif;
       font-weight: 700;
       position: relative;
       z-index: 1;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    p {
+      font-size: 1.13rem;
+      line-height: 1.8;
+      color: #c9d1d9;
+      margin-bottom: 18px;
       position: relative;
       z-index: 1;
     }
-    li {
-      background: #161b22;
-      margin-bottom: 14px;
-      padding: 16px 14px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      font-size: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    li:hover {
-      box-shadow: 0 6px 24px #06b6d4aa;
-      transform: translateY(-2px) scale(1.01);
-    }
-    .game-title {
-      font-weight: bold;
-      color: #3b82f6;
-      letter-spacing: 0.5px;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-    }
-    .download-link {
+    .highlight {
       color: #06b6d4;
-      background: #222b3a;
-      padding: 5px 12px; /* smaller padding */
-      border-radius: 7px;
-      text-decoration: none;
+      font-weight: bold;
+    }
+    .yt-link {
+      color: #3b82f6;
       font-weight: 600;
-      font-size: 0.92rem; /* smaller font */
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-      box-shadow: 0 2px 8px rgba(6,182,212,0.08);
-      margin-left: 10px;
+      word-break: break-all;
     }
-    .download-link:hover, .download-link:focus {
-      background: linear-gradient(90deg, #3b82f6 60%, #06b6d4 100%);
-      color: #fff;
-      transform: scale(1.05);
-      outline: none;
+    .preview-img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #06b6d4aa;
+      display: block;
+      margin: 24px auto 32px auto;
     }
-    @media (max-width: 600px) {
+    footer {
+      text-align: center;
+      padding: 18px 0 10px 0;
+      background-color: #161b22cc;
+      color: #7f8c8d;
+      font-size: 1rem;
+      margin-top: 48px;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 -2px 12px rgba(6,182,212,0.08);
+    }
+    @media (max-width: 768px) {
       .header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 12px 8px;
+        padding: 14px 10px;
       }
       .brand img {
-        height: 28px;
-        margin-right: 6px;
+        height: 36px;
+        margin-right: 8px;
       }
       .brand h1 {
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
       .menu-toggle {
-        top: 10px;
-        right: 10px;
+        top: 14px;
+        right: 14px;
       }
       nav {
-        right: 10px;
-        top: 44px;
-        min-width: 100px;
-        padding: 7px 0;
+        right: 14px;
+        top: 54px;
+        min-width: 120px;
+        padding: 10px 0;
       }
       .container {
-        margin: 18px 4px 0 4px;
-        padding: 10px 4px 18px 4px;
-        border-radius: 10px;
+        margin: 32px 8px 0 8px;
+        padding: 18px 8px;
       }
       h2 {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
-      li {
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 0.95rem;
-        padding: 10px 6px;
-      }
-      .download-link {
-        margin-left: 0;
-        margin-top: 8px;
-        width: auto;
-        text-align: center;
-        padding: 5px 12px; /* keep small on mobile */
-        font-size: 0.92rem;
+      p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -241,7 +214,6 @@
       <img src="https://i.postimg.cc/NG36k4vh/Chat-GPT-Image-May-15-2025-01-09-05-AM.png" alt="Getzo logo" />
       <h1>getzo</h1>
     </div>
-    <!-- Hamburger icon styled like index.html/about.html -->
     <button class="menu-toggle" onclick="toggleMenu()" aria-label="Open menu">
       <span></span>
       <span></span>
@@ -254,27 +226,35 @@
       <a href="contact.html">📞 Contact</a>
     </nav>
   </div>
+
   <div class="container">
-    <h2>Games List</h2>
-    <ul>
-      <li>
-        <img src="https://i.postimg.cc/vZqD3Yx1/1635447010-san.jpg" alt="GTA San Andreas MOD" style="width:48px;height:48px;border-radius:8px;object-fit:cover;margin-right:12px;">
-        <span class="game-title">GTA San Andreas MOD</span>
-        <a href="index.html" class="download-link">Info</a>
-      </li>
-      <li>
-        <img src="https://i.postimg.cc/520V39NY/gta4-cover.jpg" alt="GTA 4 Complete Edition" style="width:48px;height:48px;border-radius:8px;object-fit:cover;margin-right:12px;">
-        <span class="game-title">GTA 4 Complete Edition</span>
-        <a href="gta4.html" class="download-link">Info</a>
-      </li>
-    </ul>
+    <h2>GTA IV Mobile Preview</h2>
+    <img src="https://i.postimg.cc/520V39NY/gta4-cover.jpg" alt="GTA IV Mobile Preview Cover" class="preview-img" />
+    <p><strong class="highlight">SHARE WITH YOUR FRIENDS!</strong></p>
+    <p>
+      This is yet another GTA IV copy for mobile. As we know, Rockstar Games hasn’t released the game for mobile platforms like Android and iOS. Currently, the game is only available for PlayStation 3, Xbox 360, and Windows. Because of this, fans end up recreating these games on other platforms. This one, for example, is a preview version of the mobile version made in Unity 3D.
+    </p>
+    <p>
+      We’re highlighting this new project on our site because it has better quality than other fan-made versions. We’re referring to the quality of the animations, graphics, and overall experience.
+    </p>
+    <p>
+      In this <strong>Preview Version 0.1</strong>, we are limited to staying on “Happiness Island,” where the Statue of Liberty is located in the game. That’s obviously because the rest of the map isn’t complete yet. We believe that the developer will gradually build the rest of the map and release it in future versions of the game.
+    </p>
+    <p>
+      This game was developed by <strong>New Games Corporation</strong>:<br />
+      <a href="https://www.youtube.com/c/NewGamesCorporation" class="yt-link" target="_blank">https://www.youtube.com/c/NewGamesCorporation</a>
+    </p>
   </div>
+
+  <footer>
+    &copy; 2025 GTA Fan Community. All rights reserved.
+  </footer>
   <script>
     function toggleMenu() {
       const menu = document.getElementById('menu');
       menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
     }
-    // Optional: Hide menu when clicking outside on mobile
+    // Hide menu when clicking outside on mobile
     document.addEventListener('click', function(event) {
       const menu = document.getElementById('menu');
       const toggle = document.querySelector('.menu-toggle');
