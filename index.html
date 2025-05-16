@@ -1,13 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Download GTA San Andreas</title>
-
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background-color: #0d1117;
@@ -22,6 +26,8 @@
       background-color: #161b22;
       padding: 15px 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      position: relative;
+      z-index: 10;
     }
 
     .brand {
@@ -35,7 +41,7 @@
     }
 
     .brand h1 {
-      font-size: 26px;
+      font-size: 22px;
       font-weight: 700;
       margin: 0;
       background: linear-gradient(90deg, #3b82f6, #06b6d4);
@@ -63,7 +69,7 @@
 
     .dropdown {
       position: absolute;
-      top: 65px;
+      top: 60px;
       right: 20px;
       background-color: #1f2937;
       border-radius: 10px;
@@ -71,7 +77,6 @@
       display: none;
       flex-direction: column;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      z-index: 100;
     }
 
     .dropdown a {
@@ -87,9 +92,11 @@
     }
 
     .container {
-      max-width: 420px;
-      margin: 0 auto;
+      max-width: 100%;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .card {
@@ -97,11 +104,14 @@
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
       margin-bottom: 20px;
-      overflow: hidden;
+      max-width: 420px;
+      width: 100%;
     }
 
     .card img {
       width: 100%;
+      height: auto;
+      display: block;
     }
 
     .card-content {
@@ -109,7 +119,7 @@
     }
 
     .title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
       margin-bottom: 6px;
     }
@@ -143,6 +153,7 @@
 
     .features {
       margin-bottom: 16px;
+      padding-left: 18px;
     }
 
     .features li {
@@ -193,10 +204,37 @@
       margin-top: 20px;
       border-radius: 12px;
       overflow: hidden;
+      width: 100%;
+      max-width: 420px;
     }
 
     .screenshot img {
       width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 500px) {
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      .card-content {
+        padding: 14px;
+      }
+
+      .title {
+        font-size: 18px;
+      }
+
+      .menu-icon {
+        width: 25px;
+        height: 18px;
+      }
+
+      .menu-icon span {
+        height: 3px;
+      }
     }
   </style>
 </head>
@@ -213,7 +251,7 @@
       <span></span>
     </div>
     <div class="dropdown" id="dropdownMenu">
-      <a href="#">🏠 Home</a>
+      <a href="index.html">🏠 Home</a>
       <a href="games.html">📂 Games</a>
       <a href="about.html">ℹ️ About</a>
       <a href="#">📞 Contact</a>
@@ -246,6 +284,9 @@
 
     <div class="screenshot">
       <img src="https://i.postimg.cc/50FHXh0X/Grand-Theft-Auto-San-Andreas-Screenshot-2021-08-27-18-50-54-43.png" alt="GTA Gameplay Screenshot">
+      <img src="https://i.postimg.cc/Vvn5305k/cxxq2t7p99o61.webp" alt="GTA Gameplay Screenshot">
+      <img src="https://i.postimg.cc/Bvz6bBKv/42484-1350051039-gta-sa2012-10-1217-58-06-44.jpg" alt="GTA Gameplay Screenshot">
+      <img src="https://i.postimg.cc/8CfGKQ71/th-740-1017.jpg" alt="GTA Gameplay Screenshot">
     </div>
   </div>
 
@@ -258,4 +299,3 @@
 
 </body>
 </html>
-
